@@ -1,15 +1,4 @@
-// src/is/index.ts
-var prototype = Object.prototype;
-var isType = (val, type) => prototype.toString.call(val) === `[object ${type}]`;
-var isString = (val) => isType(val, "String" /* String */);
-var isDate = (val) => isType(val, "Date" /* Date */);
-var isNumber = (val) => isType(val, "Number" /* Number */);
-var isNull = (val) => isType(val, "Null" /* Null */);
-var isArray = (val) => Array.isArray(val);
-export {
-  isArray,
-  isDate,
-  isNull,
-  isNumber,
-  isString
-};
+import './chunk-HTHTVXPR.mjs';
+export { a as MDate, b as mdate } from './chunk-7LY72DQU.mjs';
+export { a as LangConfig } from './chunk-QXQ2WEX5.mjs';
+export { h as isArray, d as isDate, g as isFunction, p as isIntegerKey, i as isMap, f as isNull, e as isNumber, m as isObject, n as isPlainObject, o as isPromise, k as isRegExp, j as isSet, c as isString, l as isSymbol, a as objectToString, b as toTypeString } from './chunk-OMHHTGB5.mjs';

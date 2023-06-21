@@ -1,7 +1,16 @@
 /**
  * 默认语言配置
  */
-export const LangConfig = {
+export type Lang = 'en-US' | 'zh-CN'
+export interface LangConfigItem {
+  MMM: Array<string>;
+  MMMM: Array<string>;
+  Do: Array<string>;
+  WW: Array<string>;
+  WWW: Array<string>;
+}
+export type LangConfigType = Record<Lang, LangConfigItem>
+export const LangConfig: LangConfigType= {
   'en-US': {
     'MMM':['Jan.','Feb.','Mar.','Apr.','May.','Jun.','Jul.','Aug.','Sept.','Oct.','Nov.','Dec.'],
     'MMMM':['January','February','March','April','May','June','July','August','September','October','November','December'],

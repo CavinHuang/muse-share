@@ -1,15 +1,23 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entryPoints: ['src/index.ts'],
-  bundle: true,
-  splitting: true,
+  entryPoints: ['src/**/*.ts'],
   outDir: 'dist',
-  format: ['iife', 'cjs', 'esm'],
-  globalName: 'MUtil',
+  format: ['esm','cjs'],
   dts: true,
-  shims: true,
-  target: 'es2015',
-  platform: "neutral"
+  splitting: true,
+  sourcemap: false,
+  clean: true,
+  treeshake:true,  
+  minify: true,
+  banner: {
+    js: `/**
+*        
+*   ---=== MuseTools ===---
+*   https://github.com/CavinHuang/muse-share
+* 
+*   一些实用工具函数
+*
+*/`}
 });
 
