@@ -1,14 +1,24 @@
 {
   "name": "muse-share",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "日常工具函数，支持tree shaking",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsup --watch"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "util",
+    "date",
+    "string"
+  ],
+  "files": [
+    "./dist/**/*",
+    "package.json"
+  ],
+  "author": "cavinHuang",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.3.1",

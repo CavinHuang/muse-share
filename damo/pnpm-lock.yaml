@@ -1,0 +1,16 @@
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  muse-share:
+    specifier: ^0.0.2
+    version: 0.0.2
+
+packages:
+
+  /muse-share@0.0.2:
+    resolution: {integrity: sha512-ZQs0OKIkB8kqMO/ZflnTba3k/00/jwhW8Y/oo0NCNpOVLcv8KFNW3ZzBkuJEvzA03g/JGfPuabnDfAKHMbn7FQ==}
+    dev: false
