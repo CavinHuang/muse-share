@@ -7,7 +7,10 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsup --watch"
+    "dev": "tsup --watch",
+    "doc": "api-extractor run --local --verbose && api-documenter markdown -i temp -o doc",
+    "doc:debug": "api-extractor run --local --verbose --diagnostics && api-documenter markdown -i temp -o doc",
+    "trace": "tsc dist/types/index.d.ts --traceResolution > trace.log"
   },
   "keywords": [
     "util",
@@ -21,6 +24,8 @@
   "author": "cavinHuang",
   "license": "ISC",
   "devDependencies": {
+    "@microsoft/api-documenter": "^7.22.21",
+    "@microsoft/api-extractor": "^7.36.0",
     "@types/node": "^20.3.1",
     "tsup": "^7.0.0",
     "typescript": "^5.1.3"

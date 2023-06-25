@@ -1,0 +1,2615 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.36.0",
+    "schemaVersion": 1011,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      },
+      "reportUnsupportedHtmlElements": false
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "muse-share!",
+  "docComment": "",
+  "name": "muse-share",
+  "preserveMemberOrder": false,
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "muse-share!",
+      "name": "",
+      "preserveMemberOrder": false,
+      "members": [
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!isArray:var",
+          "docComment": "/**\n * 是否是数组\n *\n * @param val - 检测值\n *\n * @returns { boolean } - 是否是数组\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isArray: "
+            },
+            {
+              "kind": "Content",
+              "text": "<T = any>(val: unknown) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "val",
+              "canonicalReference": "muse-share!~val"
+            },
+            {
+              "kind": "Content",
+              "text": " is T[]"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isArray",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!isDate:var",
+          "docComment": "/**\n * 是否是日期对象\n *\n * @param val - 检测值\n *\n * @returns { boolean } - 是否是日期对象\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isDate: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: unknown) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "val",
+              "canonicalReference": "muse-share!~val"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "Date",
+              "canonicalReference": "!Date:interface"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isDate",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!isFunction:var",
+          "docComment": "/**\n * 是否是函数\n *\n * @param val - 检测值\n *\n * @returns { boolean } - 是否是函数\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isFunction: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: unknown) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "val",
+              "canonicalReference": "muse-share!~val"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "Function",
+              "canonicalReference": "!Function:interface"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isFunction",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!isIntegerKey:var",
+          "docComment": "/**\n * 是否是整数\n *\n * @param val - 检测值\n *\n * @returns \n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isIntegerKey: "
+            },
+            {
+              "kind": "Content",
+              "text": "(key: unknown) => boolean"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isIntegerKey",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!isMap:var",
+          "docComment": "/**\n * 是否是map\n *\n * @param val - 检测值\n *\n * @returns { boolean } - 是否是map\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isMap: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: unknown) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "val",
+              "canonicalReference": "muse-share!~val"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "Map",
+              "canonicalReference": "!Map:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any, any>"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isMap",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!isNull:var",
+          "docComment": "/**\n * 是否是null\n *\n * @param val - 检测值\n *\n * @returns { boolean } - 是否是null\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isNull: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: unknown) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "val",
+              "canonicalReference": "muse-share!~val"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "Date",
+              "canonicalReference": "!Date:interface"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isNull",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!isNumber:var",
+          "docComment": "/**\n * 是否是数字\n *\n * @param val - 检测值\n *\n * @returns { boolean } - 是否是数字\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isNumber: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: unknown) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "val",
+              "canonicalReference": "muse-share!~val"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "Date",
+              "canonicalReference": "!Date:interface"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isNumber",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!isObject:var",
+          "docComment": "/**\n * 是否是object\n *\n * @param val - 检测值\n *\n * @returns { boolean } - 是否是object\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isObject: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: unknown) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "val",
+              "canonicalReference": "muse-share!~val"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "Record",
+              "canonicalReference": "!Record:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<any, any>"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isObject",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!isPlainObject:var",
+          "docComment": "/**\n * 是否是object\n *\n * @param val - \n *\n * @returns \n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isPlainObject: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: unknown) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "val",
+              "canonicalReference": "muse-share!~val"
+            },
+            {
+              "kind": "Content",
+              "text": " is object"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isPlainObject",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!isPromise:var",
+          "docComment": "/**\n * 是否是promise\n *\n * @param val - 检测值\n *\n * @returns { boolean } - 是否是promise\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isPromise: "
+            },
+            {
+              "kind": "Content",
+              "text": "<T = any>(val: unknown) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "val",
+              "canonicalReference": "muse-share!~val"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<T>"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isPromise",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!isRegExp:var",
+          "docComment": "/**\n * 是否是正则表达式\n *\n * @param val - 检测值\n *\n * @returns { boolean } - 是否是正则表达式\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isRegExp: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: unknown) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "val",
+              "canonicalReference": "muse-share!~val"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "RegExp",
+              "canonicalReference": "!RegExp:interface"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isRegExp",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!isSet:var",
+          "docComment": "/**\n * 是否是set\n *\n * @param val - 检测值\n *\n * @returns { boolean } - 是否是set\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isSet: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: unknown) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "val",
+              "canonicalReference": "muse-share!~val"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "Set",
+              "canonicalReference": "!Set:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isSet",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!isString:var",
+          "docComment": "/**\n * 是否是字符串\n *\n * @param val - 检测值\n *\n * @returns { boolean } - 是否是字符串\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isString: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: unknown) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "val",
+              "canonicalReference": "muse-share!~val"
+            },
+            {
+              "kind": "Content",
+              "text": " is string"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isString",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!isSymbol:var",
+          "docComment": "/**\n * 是否是symbol\n *\n * @param val - 检测值\n *\n * @returns { boolean } - 是否是symbol\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isSymbol: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: unknown) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "val",
+              "canonicalReference": "muse-share!~val"
+            },
+            {
+              "kind": "Content",
+              "text": " is symbol"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isSymbol",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "muse-share!Lang:type",
+          "docComment": "/**\n * 默认语言配置\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "type Lang = "
+            },
+            {
+              "kind": "Content",
+              "text": "'en-US' | 'zh-CN'"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dist/date/lang.d.ts",
+          "releaseTag": "Public",
+          "name": "Lang",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!LangConfig:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "LangConfig: "
+            },
+            {
+              "kind": "Reference",
+              "text": "LangConfigType",
+              "canonicalReference": "muse-share!LangConfigType:type"
+            }
+          ],
+          "fileUrlPath": "dist/date/lang.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "LangConfig",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "muse-share!LangConfigItem:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "interface LangConfigItem "
+            }
+          ],
+          "fileUrlPath": "dist/date/lang.d.ts",
+          "releaseTag": "Public",
+          "name": "LangConfigItem",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "muse-share!LangConfigItem#Do:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "Do: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Array",
+                  "canonicalReference": "!Array:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<string>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "Do",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "muse-share!LangConfigItem#MMM:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "MMM: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Array",
+                  "canonicalReference": "!Array:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<string>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "MMM",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "muse-share!LangConfigItem#MMMM:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "MMMM: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Array",
+                  "canonicalReference": "!Array:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<string>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "MMMM",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "muse-share!LangConfigItem#WW:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "WW: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Array",
+                  "canonicalReference": "!Array:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<string>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "WW",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "muse-share!LangConfigItem#WWW:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "WWW: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Array",
+                  "canonicalReference": "!Array:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<string>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "WWW",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "muse-share!LangConfigType:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "type LangConfigType = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Record",
+              "canonicalReference": "!Record:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "Lang",
+              "canonicalReference": "muse-share!Lang:type"
+            },
+            {
+              "kind": "Content",
+              "text": ", "
+            },
+            {
+              "kind": "Reference",
+              "text": "LangConfigItem",
+              "canonicalReference": "muse-share!LangConfigItem:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dist/date/lang.d.ts",
+          "releaseTag": "Public",
+          "name": "LangConfigType",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 7
+          }
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "muse-share!MDate:class",
+          "docComment": "/**\n * 日期处理类\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class MDate "
+            }
+          ],
+          "fileUrlPath": "dist/date/MDate.d.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "MDate",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Property",
+              "canonicalReference": "muse-share!MDate#_date:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "_date: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Date",
+                  "canonicalReference": "!Date:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "_date",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "muse-share!MDate#_lang:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "_lang: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Lang",
+                  "canonicalReference": "muse-share!Lang:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "_lang",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "muse-share!MDate#_langMap:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "_langMap: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "LangConfigItem",
+                  "canonicalReference": "muse-share!LangConfigItem:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "_langMap",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "muse-share!MDate#_offset:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "_offset: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "_offset",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "muse-share!MDate#_timezone:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "_timezone: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "_timezone",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Constructor",
+              "canonicalReference": "muse-share!MDate:constructor(1)",
+              "docComment": "/**\n * Constructs a new instance of the `MDate` class\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(date: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Date",
+                  "canonicalReference": "!Date:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | string | number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", options?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{\n        lang: 'zh-CN' | 'en-US';\n        langMap?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "LangConfigItem",
+                  "canonicalReference": "muse-share!LangConfigItem:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "date",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 4,
+                    "endIndex": 7
+                  },
+                  "isOptional": true
+                }
+              ]
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#change:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "change(unit: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(typeof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "period",
+                  "canonicalReference": "muse-share!~period:var"
+                },
+                {
+                  "kind": "Content",
+                  "text": ")[number] | 'timestamp' | 'week'"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", value: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "unit",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "value",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "change"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#clone:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "clone(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "MDate",
+                  "canonicalReference": "muse-share!MDate:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "clone"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#diffWith:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "diffWith(that: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "MDate",
+                  "canonicalReference": "muse-share!MDate:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | string | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Date",
+                  "canonicalReference": "!Date:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", unit: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(typeof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "period",
+                  "canonicalReference": "muse-share!~period:var"
+                },
+                {
+                  "kind": "Content",
+                  "text": ")[number]"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number | false | {\n        year?: number | boolean | undefined;\n        month?: number | boolean | undefined;\n        day?: number | boolean | undefined;\n        hour?: number | boolean | undefined;\n        minute?: number | boolean | undefined;\n        second?: number | boolean | undefined;\n        millsecond?: number | boolean | undefined;\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 10,
+                "endIndex": 11
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "that",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 5
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "unit",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 6,
+                    "endIndex": 9
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "diffWith"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#endOf:member(1)",
+              "docComment": "/**\n * 获取某字段末尾时\n *\n * @param unit - \n *\n * @returns \n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "endOf(unit: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(typeof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "period",
+                  "canonicalReference": "muse-share!~period:var"
+                },
+                {
+                  "kind": "Content",
+                  "text": ")[number] | 'timestamp' | 'week'"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "MDate",
+                  "canonicalReference": "muse-share!MDate:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "unit",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "endOf"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#format:member(1)",
+              "docComment": "/**\n * 格式化时间\n *\n * @param pattern -  @params {string} pattern.YY 18 两位数的年份  @params {string} pattern.YYYY 2018 四位数的年份  @params {string} pattern.M 1-12 月份，从 1 开始  @params {string} pattern.MM 01-12 月份，两位数  @params {string} pattern.MMM 1月-12月/Jan-Dec 缩写的月份名称  @params {string} pattern.MMMM 一月-十二月/January-December 完整的月份名称  @params {string} pattern.D 1-31 月份里的一天  @params {string} pattern.DD 01-31 月份里的一天，两位数  @params {string} pattern.H 0-23 小时  @params {string} pattern.HH 00-23 小时，两位数  @params {string} pattern.h 1-12 小时, 12 小时制  @params {string} pattern.hh 01-12 小时, 12 小时制, 两位数  @params {string} pattern.m 0-59 分钟  @params {string} pattern.mm 00-59 分钟，两位数  @params {string} pattern.s 0-59 秒  @params {string} pattern.ss 00-59 秒，两位数  @params {string} pattern.S 0-9 毫秒，一位数  @params {string} pattern.SS 00-99 毫秒，两位数  @params {string} pattern.SSS 000-999 毫秒，三位数  @params {string} pattern.Z -05:00 UTC 的偏移量  @params {string} pattern.ZZ -0500 UTC 的偏移量，两位数  @params {string} pattern.A AM / PM 上午 下午 大写  @params {string} pattern.a am / pm 上午 下午 小写  @params {string} pattern.W 0 0-6，分别表示星期日-星期六  @params {string} pattern.WW 周一 周x  @params {string} pattern.WWW 星期日 星期x  @params {string} pattern.Do 1st... 31st 带序数词的月份里的一天  @params {string} pattern.x 1410715640 Unix时间戳(秒)  @params {string} pattern.X 1410715640579 Unix时间戳(毫秒)\n *\n * @returns \n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "format(pattern?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "pattern",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "format"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#get:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "get(unit: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(typeof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "period",
+                  "canonicalReference": "muse-share!~period:var"
+                },
+                {
+                  "kind": "Content",
+                  "text": ")[number] | 'timestamp' | 'week'"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "unit",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "get"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#getDate:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getDate(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Date",
+                  "canonicalReference": "!Date:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getDate"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#getInstance:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getInstance(that: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "MDate",
+                  "canonicalReference": "muse-share!MDate:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "that",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getInstance"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#getTime:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getTime(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getTime"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#getTimezone:member(1)",
+              "docComment": "/**\n * 获取时区\n *\n * @returns \n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getTimezone(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getTimezone"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#getTimezoneOffset:member(1)",
+              "docComment": "/**\n * 获取当前时区与UTC的时间差(分钟)\n *\n * @returns \n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getTimezoneOffset(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getTimezoneOffset"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#getUnix:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getUnix(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getUnix"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#isAfter:member(1)",
+              "docComment": "/**\n * 是否在某个时间点之后\n *\n * @param that - \n *\n * @param unit - \n *\n * @returns \n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "isAfter(that: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "MDate",
+                  "canonicalReference": "muse-share!MDate:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | string | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Date",
+                  "canonicalReference": "!Date:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", unit?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(typeof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "period",
+                  "canonicalReference": "muse-share!~period:var"
+                },
+                {
+                  "kind": "Content",
+                  "text": ")[number] | 'timestamp' | 'week'"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 10,
+                "endIndex": 11
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "that",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 5
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "unit",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 6,
+                    "endIndex": 9
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "isAfter"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#isBefore:member(1)",
+              "docComment": "/**\n * 是否在某个时间点之前\n *\n * @param that - \n *\n * @param unit - \n *\n * @returns \n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "isBefore(that: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "MDate",
+                  "canonicalReference": "muse-share!MDate:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | string | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Date",
+                  "canonicalReference": "!Date:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", unit?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(typeof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "period",
+                  "canonicalReference": "muse-share!~period:var"
+                },
+                {
+                  "kind": "Content",
+                  "text": ")[number] | 'timestamp' | 'week'"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 10,
+                "endIndex": 11
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "that",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 5
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "unit",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 6,
+                    "endIndex": 9
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "isBefore"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#isBetween:member(1)",
+              "docComment": "/**\n * 是否在两个时间点之间\n *\n * @param startDate - \n *\n * @param endDate - \n *\n * @param unit - \n *\n * @returns \n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "isBetween(startDate: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "MDate",
+                  "canonicalReference": "muse-share!MDate:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | string | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Date",
+                  "canonicalReference": "!Date:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", endDate: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "MDate",
+                  "canonicalReference": "muse-share!MDate:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | string | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Date",
+                  "canonicalReference": "!Date:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", unit?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(typeof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "period",
+                  "canonicalReference": "muse-share!~period:var"
+                },
+                {
+                  "kind": "Content",
+                  "text": ")[number] | 'timestamp' | 'week'"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 15,
+                "endIndex": 16
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "startDate",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 5
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "endDate",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 6,
+                    "endIndex": 10
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "unit",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 11,
+                    "endIndex": 14
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "isBetween"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#isSame:member(1)",
+              "docComment": "/**\n * 是否和某个时间点相等\n *\n * @param that - \n *\n * @param unit - \n *\n * @returns \n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "isSame(that: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "MDate",
+                  "canonicalReference": "muse-share!MDate:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | string | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Date",
+                  "canonicalReference": "!Date:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", unit?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(typeof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "period",
+                  "canonicalReference": "muse-share!~period:var"
+                },
+                {
+                  "kind": "Content",
+                  "text": ")[number] | 'timestamp' | 'week'"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 10,
+                "endIndex": 11
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "that",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 5
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "unit",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 6,
+                    "endIndex": 9
+                  },
+                  "isOptional": true
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "isSame"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#isValid:member(1)",
+              "docComment": "/**\n * 是否是有效的时间\n *\n * @returns \n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "isValid(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "isValid"
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "muse-share!MDate.now:member",
+              "docComment": "/**\n * 静态方法 当前时间  @type Number\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static now: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "() => number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "now",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": true,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#set:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "set(unit: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(typeof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "period",
+                  "canonicalReference": "muse-share!~period:var"
+                },
+                {
+                  "kind": "Content",
+                  "text": ")[number] | 'timestamp' | 'week'"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", value: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "unit",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "value",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "set"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#startOf:member(1)",
+              "docComment": "/**\n * 获取某字段起始时\n *\n * @param unit - \n *\n * @returns \n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "startOf(unit: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(typeof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "period",
+                  "canonicalReference": "muse-share!~period:var"
+                },
+                {
+                  "kind": "Content",
+                  "text": ")[number] | 'timestamp' | 'week'"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "MDate",
+                  "canonicalReference": "muse-share!MDate:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "unit",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "startOf"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#switchTimezone:member(1)",
+              "docComment": "/**\n * 切换时区\n *\n * @param timezone - \n *\n * @returns \n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "switchTimezone(timezone: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "this"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "timezone",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "switchTimezone"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#toArray:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "toArray(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "toArray"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#toDate:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "toDate(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Date",
+                  "canonicalReference": "!Date:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "toDate"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#toISOString:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "toISOString(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "toISOString"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#toObject:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "toObject(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{\n        year: number;\n        month: number;\n        day: number;\n        hour: number;\n        minute: number;\n        second: number;\n        millsecond: number;\n        timestamp: number;\n        week: number;\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "toObject"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "muse-share!MDate#toString:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "toString(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "toString"
+            }
+          ],
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "muse-share!mdate:function(1)",
+          "docComment": "/**\n * 函数调用\n *\n * @param args - \n *\n * @returns \n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare function mdate(...args: "
+            },
+            {
+              "kind": "Content",
+              "text": "any[]"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "MDate",
+              "canonicalReference": "muse-share!MDate:class"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dist/date/MDate.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "args",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "mdate"
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!objectToString:var",
+          "docComment": "/**\n * object to string\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "objectToString: "
+            },
+            {
+              "kind": "Content",
+              "text": "() => string"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "objectToString",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "muse-share!toTypeString:var",
+          "docComment": "/**\n * 获取type\n *\n * @param value - \n *\n * @returns \n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "toTypeString: "
+            },
+            {
+              "kind": "Content",
+              "text": "(value: unknown) => string"
+            }
+          ],
+          "fileUrlPath": "dist/is/index.d.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "toTypeString",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        }
+      ]
+    }
+  ]
+}
