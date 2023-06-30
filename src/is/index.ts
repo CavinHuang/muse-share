@@ -135,3 +135,15 @@ export const isIntegerKey = (key: unknown) =>
   key !== 'NaN' &&
   key[0] !== '-' &&
   '' + parseInt(key, 10) === key
+
+/**
+ * 是否是空的
+ * @param { any } val - 检测值  
+ * @returns { boolean }
+ */
+export const isEmpty = (val: unknown) => {
+  if (isArray(val) || isString(val)) return val.length === 0
+  if (isObject(val)) return Object.keys(val).length === 0
+  if (isMap(val) || isSet(val)) return val.size === 0
+  return Boolean(val)
+}
