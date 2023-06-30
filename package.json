@@ -10,7 +10,8 @@
     "dev": "tsup --watch",
     "doc": "api-extractor run --local --verbose && api-documenter markdown -i temp -o doc",
     "doc:debug": "api-extractor run --local --verbose --diagnostics && api-documenter markdown -i temp -o doc",
-    "trace": "tsc dist/types/index.d.ts --traceResolution > trace.log"
+    "trace": "tsc dist/types/index.d.ts --traceResolution > trace.log",
+    "docT": "jsdoc2md src/is/index.ts"
   },
   "keywords": [
     "util",
