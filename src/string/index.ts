@@ -1,4 +1,4 @@
-import { math_between } from '../number'
+import { mathBetween } from '../number'
 
 export * from './chinese'
 
@@ -11,7 +11,7 @@ export * from './chinese'
  * @returns 具有指定长度和基数（基数）的随机生成的字符串。 radix 是可选的，如果未提供则默认为 16。
  */
 export function strRandom(count: number, radix = 16) {
-  radix = math_between(radix, 2, 36)
+  radix = mathBetween(radix, 2, 36)
   let result = ''
   for (let i = 1; i <= count; i++) {
       result += Math.floor(Math.random() * radix).toString(radix)

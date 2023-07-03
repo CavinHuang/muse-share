@@ -7,7 +7,7 @@
  * @returns 函数“math_between”返回一个在“min”和“max”参数定义的范围内的数字。如果输入的“v”小于“min”，则函数返回“min”。如果 `v` 大于 `max`，函数返回
  * `max`。如果 `v` 在 `min` 和 `max` 之间，函数返回 `v`。
  */
-export function math_between(v: number, min: number, max: number) {
+export function mathBetween(v: number, min: number, max: number) {
   if (min > max) {
       [min, max] = [max, min]
   }
