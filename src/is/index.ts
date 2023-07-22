@@ -61,7 +61,7 @@ export const isDate = (val: unknown): val is Date => isType(val, normalType.Date
  * @param { any } val - 检测值 
  * @returns { boolean } - 是否是数字
  */
-export const isNumber = (val: unknown): val is Date => isType(val, normalType.Number)
+export const isNumber = (val: unknown): val is number => isType(val, normalType.Number)
 
 /**
  * 是否是null
@@ -106,6 +106,14 @@ export const isFunction = (val: unknown): val is Function => typeof val === 'fun
  * @returns { boolean } - 是否是数组
  */
 export const isArray = <T = any>(val: unknown): val is Array<T> => Array.isArray(val)
+
+/**
+ * 是否是boolean
+ * @param val 
+ * @returns 
+ */
+export const isBoolean = function (val: unknown): val is boolean { return typeof val === 'boolean'; };
+
 
 /**
  * 是否是map

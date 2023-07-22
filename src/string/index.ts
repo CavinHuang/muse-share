@@ -59,3 +59,17 @@ export function strCapital(str: string) {
 export function strCapitalAll(str: string) {
   return str.split(' ').map(strCapital).join(' ')
 }
+
+/**
+* 驼峰转短横线
+* @param word 待转换词条
+* @returns
+*/
+export function kebabCase(word: string) {
+ const newWord = word
+   .replace(RegExp('[A-Z]', 'g'), function (i) {
+     return '-' + i
+   })
+   .toLowerCase()
+ return newWord
+}
