@@ -43,6 +43,13 @@ const isType = (val: unknown, type: normalType) => toTypeString(val) === `[objec
 export const isString = (val: unknown): val is string => isType(val, normalType.String);
 
 /**
+ * 是否是boolean
+ * @param val 
+ * @returns 
+ */
+export const isBoolean = (val: unknown): val is boolean => typeof val === 'boolean'
+
+/**
  * 是否是日期对象
  * @param { any } val - 检测值 
  * @returns { boolean } - 是否是日期对象
@@ -240,7 +247,7 @@ export function isEmail(str: string): boolean {
  * @param color - 它可以是任何数据类型。
  * @returns 返回一个布尔值。
  */
-function isRgbColor(color: any): color is RgbColor {
+export function isRgbColor(color: any): color is RgbColor {
   if (!Array.isArray(color)) { return false }
   return (color.length === 4 || color.length === 3) && color.every((v, i) => {
       if (i === 3) {
