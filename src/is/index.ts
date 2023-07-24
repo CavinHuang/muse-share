@@ -43,13 +43,6 @@ const isType = (val: unknown, type: normalType) => toTypeString(val) === `[objec
 export const isString = (val: unknown): val is string => isType(val, normalType.String);
 
 /**
- * 是否是boolean
- * @param val 
- * @returns 
- */
-export const isBoolean = (val: unknown): val is boolean => typeof val === 'boolean'
-
-/**
  * 是否是日期对象
  * @param { any } val - 检测值 
  * @returns { boolean } - 是否是日期对象

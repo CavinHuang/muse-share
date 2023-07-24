@@ -12,3 +12,15 @@ export * from './assign'
 export function keyIn<T extends object>(key: Key, obj: T): key is keyof T {
   return key in obj
 }
+
+const hasOwnProperty = Object.prototype.hasOwnProperty
+
+/**
+ * hasOwnProperty
+ * @param val 
+ * @param key 
+ * @returns 
+ */
+export function hasOwn(val: object, key: string | symbol): key is keyof typeof val {
+  return hasOwnProperty.call(val, key)
+}
