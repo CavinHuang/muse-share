@@ -1,6 +1,6 @@
-import { imageToDataURI } from "../image"
-import { throw_type_error } from "../error"
-import { isBase64, isVoid } from "../is"
+import { imageToDataURI } from '../image'
+import { throw_type_error } from '../error'
+import { isBase64, isVoid } from '../is'
 
 /**
  * 此函数将 Blob 对象转换为数据 URI 字符串或 ArrayBuffer。
@@ -12,16 +12,15 @@ import { isBase64, isVoid } from "../is"
 export function blobToDateURI(blob: Blob): Promise<string | ArrayBuffer> {
   const reader = new FileReader()
   return new Promise((resolve, reject) => {
-      reader.onload = function (e) {
-          const result = e.target?.result
-          if (!isVoid(result)) {
-              resolve(result)
-          }
-          else {
-              reject(void 0)
-          }
-      }
-      reader.readAsDataURL(blob)
+    reader.onload = function (e) {
+      const result = e.target?.result
+      if (!isVoid(result))
+        resolve(result)
+
+      else
+        reject(new Error('blob transform dataUri failed'))
+    }
+    reader.readAsDataURL(blob)
   })
 }
 
@@ -36,12 +35,12 @@ export function urlToBlob(url: string): Promise<Blob> {
   xhr.open('get', url, true)
   xhr.responseType = 'arraybuffer'
   return new Promise((resolve, reject) => {
-      xhr.onload = function () {
-          const blob = new Blob([this.response])
-          resolve(blob)
-      }
-      xhr.onerror = reject
-      xhr.send()
+    xhr.onload = function () {
+      const blob = new Blob([this.response])
+      resolve(blob)
+    }
+    xhr.onerror = reject
+    xhr.send()
   })
 }
 
@@ -54,23 +53,23 @@ export function urlToBlob(url: string): Promise<Blob> {
  * @returns 从 dataURI 字符串输入创建的 Blob 对象。 Blob 对象包含指定 MIME 类型的二进制数据。
  */
 export function data_URI_to_blob(dataURI: string, mimeType?: string) {
-  if (!isBase64(dataURI)) {
-      throw_type_error('base64', 'dataURI')
-  }
+  if (!isBase64(dataURI))
+    throw_type_error('base64', 'dataURI')
+
   const arr = dataURI.split(',')
   mimeType ??= arr[0].match(/:(.*?);/)?.[1]
   let baseStr = ''
   try {
-      baseStr = atob(arr[1])
+    baseStr = atob(arr[1])
   }
   catch (e) {
-      throw_type_error('base64', 'dataURI')
+    throw_type_error('base64', 'dataURI')
   }
   let len = baseStr.length
   const u8arr = new Uint8Array(len)
-  while (len--) {
-      u8arr[len] = baseStr.charCodeAt(len)
-  }
+  while (len--)
+    u8arr[len] = baseStr.charCodeAt(len)
+
   return new Blob([u8arr], { type: mimeType })
 }
 
@@ -86,9 +85,9 @@ export function urlToDateURI(url: string, type?: string): Promise<string> {
   const img = new Image()
   img.src = url
   return new Promise((resolve, reject) => {
-      img.onload = () => {
-          resolve(imageToDataURI(img, type))
-      }
-      img.onerror = reject
+    img.onload = () => {
+      resolve(imageToDataURI(img, type))
+    }
+    img.onerror = reject
   })
 }

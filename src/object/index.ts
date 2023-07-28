@@ -1,4 +1,4 @@
-import { Key } from '../types'
+import type { Key } from '../types'
 
 export * from './assign'
 
@@ -17,9 +17,9 @@ const hasOwnProperty = Object.prototype.hasOwnProperty
 
 /**
  * hasOwnProperty
- * @param val 
- * @param key 
- * @returns 
+ * @param val
+ * @param key
+ * @returns
  */
 export function hasOwn(val: object, key: string | symbol): key is keyof typeof val {
   return hasOwnProperty.call(val, key)

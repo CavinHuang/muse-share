@@ -1,19 +1,19 @@
-import { RgbColor } from "../types";
+import type { RgbColor } from '../types'
 
 /**
  * 类型判断
  */
 const prototype = Object.prototype
 enum normalType {
- String = 'String',
- Number = 'Number',
- Function = 'Function',
- Date = 'Date',
- Object = 'Object',
- Null = 'Null',
- Map = 'Map',
- Set = 'Set',
- RegExp = 'RegExp'
+  String = 'String',
+  Number = 'Number',
+  Function = 'Function',
+  Date = 'Date',
+  Object = 'Object',
+  Null = 'Null',
+  Map = 'Map',
+  Set = 'Set',
+  RegExp = 'RegExp',
 }
 /**
  * object to string
@@ -22,43 +22,43 @@ export const objectToString = prototype.toString
 
 /**
  * 获取type
- * @param value 
- * @returns 
+ * @param value
+ * @returns
  */
 export const toTypeString = (value: unknown): string => objectToString.call(value)
 
 /**
  * 是不是某个type
- * @param { any } val - 待判断的值 
+ * @param { any } val - 待判断的值
  * @param { normalType } type - 类型
- * @returns 
+ * @returns
  */
 const isType = (val: unknown, type: normalType) => toTypeString(val) === `[object ${type}]`
 
 /**
  * 是否是字符串
- * @param { any } val - 检测值 
+ * @param { any } val - 检测值
  * @returns { boolean } - 是否是字符串
  */
-export const isString = (val: unknown): val is string => isType(val, normalType.String);
+export const isString = (val: unknown): val is string => isType(val, normalType.String)
 
 /**
  * 是否是日期对象
- * @param { any } val - 检测值 
+ * @param { any } val - 检测值
  * @returns { boolean } - 是否是日期对象
  */
 export const isDate = (val: unknown): val is Date => isType(val, normalType.Date)
 
 /**
  * 是否是数字
- * @param { any } val - 检测值 
+ * @param { any } val - 检测值
  * @returns { boolean } - 是否是数字
  */
 export const isNumber = (val: unknown): val is number => isType(val, normalType.Number)
 
 /**
  * 是否是null
- * @param { any } val - 检测值 
+ * @param { any } val - 检测值
  * @returns { boolean } - 是否是null
  */
 export const isNull = (val: unknown): val is Date => isType(val, normalType.Null)
@@ -70,7 +70,7 @@ export const isNull = (val: unknown): val is Date => isType(val, normalType.Null
  * @returns 函数 is_undefined 返回一个布尔值，指示输入参数 u 是否为 undefined 。
  */
 export function isUndefined(u: any): u is undefined {
-  return u === void 0
+  return u === undefined
 }
 
 /**
@@ -80,103 +80,109 @@ export function isUndefined(u: any): u is undefined {
  * @returns 一个布尔值，指示输入参数“t”是否“null”或“undefined”。
  */
 export function isVoid(t: any): t is null | undefined {
-  if (typeof t === 'number') {
-      return isNaN(t)
-  }
+  if (typeof t === 'number')
+    return Number.isNaN(t)
+
   return isNull(t) || isUndefined(t)
 }
 
 /**
  * 是否是函数
- * @param { any } val - 检测值 
+ * @param { any } val - 检测值
  * @returns { boolean } - 是否是函数
  */
+// eslint-disable-next-line @typescript-eslint/ban-types
 export const isFunction = (val: unknown): val is Function => typeof val === 'function'
 
 /**
  * 是否是数组
- * @param { any } val - 检测值  
+ * @param { any } val - 检测值
  * @returns { boolean } - 是否是数组
  */
 export const isArray = <T = any>(val: unknown): val is Array<T> => Array.isArray(val)
 
 /**
  * 是否是boolean
- * @param val 
- * @returns 
+ * @param val
+ * @returns
  */
-export const isBoolean = function (val: unknown): val is boolean { return typeof val === 'boolean'; };
-
+export const isBoolean = function (val: unknown): val is boolean {
+  return typeof val === 'boolean'
+}
 
 /**
  * 是否是map
- * @param { any } val - 检测值  
+ * @param { any } val - 检测值
  * @returns { boolean } - 是否是map
  */
-export const isMap =(val: unknown): val is Map<any, any> => isType(val, normalType.Map)
+export const isMap = (val: unknown): val is Map<any, any> => isType(val, normalType.Map)
 
 /**
  * 是否是set
- * @param { any } val - 检测值  
+ * @param { any } val - 检测值
  * @returns { boolean } - 是否是set
  */
-export const isSet =(val: unknown): val is Set<any> => isType(val, normalType.Set)
+export const isSet = (val: unknown): val is Set<any> => isType(val, normalType.Set)
 
 /**
  * 是否是正则表达式
- * @param { any } val - 检测值  
+ * @param { any } val - 检测值
  * @returns { boolean } - 是否是正则表达式
  */
-export const isRegExp =(val: unknown): val is RegExp => isType(val, normalType.RegExp)
+export const isRegExp = (val: unknown): val is RegExp => isType(val, normalType.RegExp)
 
 /**
  * 是否是symbol
- * @param { any } val - 检测值  
+ * @param { any } val - 检测值
  * @returns { boolean } - 是否是symbol
  */
 export const isSymbol = (val: unknown): val is symbol => typeof val === 'symbol'
 
 /**
  * 是否是object
- * @param { any } val - 检测值  
+ * @param { any } val - 检测值
  * @returns { boolean } - 是否是object
  */
 export const isObject = (val: unknown): val is Record<any, any> => val !== null && typeof val === 'object'
 
 /**
  * 是否是object
- * @param val 
- * @returns 
+ * @param val
+ * @returns
  */
 export const isPlainObject = (val: unknown): val is object => toTypeString(val) === '[object Object]'
 
 /**
  * 是否是promise
- * @param { any } val - 检测值  
+ * @param { any } val - 检测值
  * @returns { boolean } - 是否是promise
  */
 export const isPromise = <T = any>(val: unknown): val is Promise<T> => isObject(val) && isFunction(val.then) && isFunction(val.catch)
 
 /**
  * 是否是整数
- * @param { any } val - 检测值  
- * @returns 
+ * @param { any } val - 检测值
+ * @returns
  */
-export const isIntegerKey = (key: unknown) =>
-  isString(key) &&
-  key !== 'NaN' &&
-  key[0] !== '-' &&
-  '' + parseInt(key, 10) === key
+export function isIntegerKey(key: unknown) {
+  return isString(key)
+  && key !== 'NaN'
+  && key[0] !== '-'
+  && `${Number.parseInt(key, 10)}` === key
+}
 
 /**
  * 是否是空的
- * @param { any } val - 检测值  
+ * @param { any } val - 检测值
  * @returns { boolean }
  */
-export const isEmpty = (val: unknown) => {
-  if (isArray(val) || isString(val)) return val.length === 0
-  if (isObject(val)) return Object.keys(val).length === 0
-  if (isMap(val) || isSet(val)) return val.size === 0
+export function isEmpty(val: unknown) {
+  if (isArray(val) || isString(val))
+    return val.length === 0
+  if (isObject(val))
+    return Object.keys(val).length === 0
+  if (isMap(val) || isSet(val))
+    return val.size === 0
   return Boolean(val)
 }
 /**
@@ -228,7 +234,7 @@ export function isStringLike(target: any): target is string | number {
 * @returns 函数 is_chinese 返回一个布尔值，指示输入的 str 是否全是汉字，范围为 [0x4e00, 0x9fa5]。
 */
 export function isChinese(str: string): boolean {
-  return /^[\u4e00-\u9fa5]+$/.test(str)
+  return /^[\u4E00-\u9FA5]+$/.test(str)
 }
 
 /**
@@ -249,14 +255,14 @@ export function isEmail(str: string): boolean {
  * @returns 返回一个布尔值。
  */
 export function isRgbColor(color: any): color is RgbColor {
-  if (!Array.isArray(color)) { return false }
+  if (!Array.isArray(color))
+    return false
   return (color.length === 4 || color.length === 3) && color.every((v, i) => {
-      if (i === 3) {
-          return Number(v) <= 1
-      }
-      else {
-          return Number(v) <= 255
-      }
+    if (i === 3)
+      return Number(v) <= 1
+
+    else
+      return Number(v) <= 255
   })
 }
 
@@ -268,7 +274,7 @@ export function isRgbColor(color: any): color is RgbColor {
 * @returns 函数 is_hex_color 返回一个布尔值，指示输入的 color
 * 是否是有效的十六进制颜色代码。
 */
-function isHexColor(color: string) {
+export function isHexColor(color: string) {
   return color.match(/^#?[0-9a-fA-F]{3,8}$/) !== null
 }
 
@@ -278,7 +284,7 @@ function isHexColor(color: string) {
 * @param win - 可以是任何数据类型。
 * @returns 函数 is_window 返回一个布尔值，指示 win 参数是否与全局 window 对象相同。
 */
-function isWindow(win: any): win is Window {
+export function isWindow(win: any): win is Window {
   return win === window
 }
 
@@ -288,6 +294,6 @@ function isWindow(win: any): win is Window {
 * @param el - 可以是任何数据类型。
 * @returns 函数 is_element 返回一个布尔值，指示输入的 el 是否是 Element 类的实例。
 */
-function isElement(el: any): el is Element {
+export function isElement(el: any): el is Element {
   return el instanceof Element
 }

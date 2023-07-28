@@ -1,14 +1,14 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsup'
 
 export default defineConfig({
   entryPoints: ['src/**/*.ts'],
   outDir: 'dist',
-  format: ['esm','cjs'],
+  format: ['esm', 'cjs'],
   dts: true,
   splitting: true,
   sourcemap: false,
   clean: true,
-  treeshake:true,  
+  treeshake: true,
   minify: true,
   banner: {
     js: `/**
@@ -18,6 +18,6 @@ export default defineConfig({
 * 
 *   一些实用工具函数
 *
-*/`}
-});
-
+*/`,
+  },
+})

@@ -8,8 +8,8 @@
  * `max`。如果 `v` 在 `min` 和 `max` 之间，函数返回 `v`。
  */
 export function mathBetween(v: number, min: number, max: number) {
-  if (min > max) {
-      [min, max] = [max, min]
-  }
+  if (min > max)
+    [min, max] = [max, min]
+
   return Math.min(max, Math.max(min, v))
 }

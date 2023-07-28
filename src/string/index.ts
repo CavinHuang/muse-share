@@ -13,9 +13,9 @@ export * from './chinese'
 export function strRandom(count: number, radix = 16) {
   radix = mathBetween(radix, 2, 36)
   let result = ''
-  for (let i = 1; i <= count; i++) {
-      result += Math.floor(Math.random() * radix).toString(radix)
-  }
+  for (let i = 1; i <= count; i++)
+    result += Math.floor(Math.random() * radix).toString(radix)
+
   return result
 }
 
@@ -27,15 +27,15 @@ export function strRandom(count: number, radix = 16) {
 export function strUuid(): string {
   let uuid = ''
   if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
-      uuid = crypto.randomUUID()
+    uuid = crypto.randomUUID()
   }
   else if (typeof Blob == 'undefined') {
-      uuid = `${strRandom(8)}-${strRandom(4)}-${strRandom(4)}-${strRandom(4)}-${strRandom(12)}`
+    uuid = `${strRandom(8)}-${strRandom(4)}-${strRandom(4)}-${strRandom(4)}-${strRandom(12)}`
   }
   else {
-      const url_uuid = URL.createObjectURL(new Blob())
-      uuid = url_uuid.toString().substring(url_uuid.lastIndexOf('/') + 1)
-      URL.revokeObjectURL(url_uuid)
+    const url_uuid = URL.createObjectURL(new Blob())
+    uuid = url_uuid.toString().substring(url_uuid.lastIndexOf('/') + 1)
+    URL.revokeObjectURL(url_uuid)
   }
   return uuid
 }
@@ -66,10 +66,11 @@ export function strCapitalAll(str: string) {
 * @returns
 */
 export function kebabCase(word: string) {
- const newWord = word
-   .replace(RegExp('[A-Z]', 'g'), function (i) {
-     return '-' + i
-   })
-   .toLowerCase()
- return newWord
+  const newWord = word
+    // eslint-disable-next-line prefer-regex-literals
+    .replace(RegExp('[A-Z]', 'g'), (i) => {
+      return `-${i}`
+    })
+    .toLowerCase()
+  return newWord
 }

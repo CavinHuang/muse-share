@@ -1,6 +1,6 @@
-import { keyIn } from "../object"
-import { isVoid } from "../is"
-import { mathBetween } from "../number"
+import { keyIn } from '../object'
+import { isVoid } from '../is'
+import { mathBetween } from '../number'
 
 interface ImageSize {
   width: number
@@ -58,14 +58,13 @@ export function imageToDataURI(img: HTMLImageElement, type = DEFAULT_MIMETYPE) {
 export function imageToBlob(img: HTMLImageElement): Promise<Blob> {
   const cvs = imageToCanvas(img)
   return new Promise((resolve, reject) => {
-      cvs.toBlob(blob => {
-          if (!isVoid(blob)) {
-              resolve(blob)
-          }
-          else {
-              reject(void 0)
-          }
-      })
+    cvs.toBlob((blob) => {
+      if (!isVoid(blob))
+        resolve(blob)
+
+      else
+        reject(new Error('image transform blob failed'))
+    })
   })
 }
 
@@ -78,15 +77,15 @@ export function imageToBlob(img: HTMLImageElement): Promise<Blob> {
 export function imageGetType(filename: string) {
   const imageExt = filename.substring(filename.lastIndexOf('.'))
   const mimes = {
-      '.jpg': 'image/jpeg',
-      '.jpeg': 'image/jpeg',
-      '.png': 'image/png',
-      '.gif': 'image/gif',
-      '.webp': 'image/webp',
-      '.bmp': 'image/bmp',
-      '.svg': 'image/svg+xml',
-      '.ico': 'image/x-icon',
-      '.tiff': 'image/tiff',
+    '.jpg': 'image/jpeg',
+    '.jpeg': 'image/jpeg',
+    '.png': 'image/png',
+    '.gif': 'image/gif',
+    '.webp': 'image/webp',
+    '.bmp': 'image/bmp',
+    '.svg': 'image/svg+xml',
+    '.ico': 'image/x-icon',
+    '.tiff': 'image/tiff',
   } as const
   return keyIn(imageExt, mimes) ? mimes[imageExt] : DEFAULT_MIMETYPE
 }

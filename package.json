@@ -2,32 +2,36 @@
   "name": "muse-share",
   "version": "0.0.2",
   "description": "日常工具函数，支持tree shaking",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsup --watch",
-    "doc": "api-extractor run --local --verbose && api-documenter markdown -i temp -o doc",
-    "doc:debug": "api-extractor run --local --verbose --diagnostics && api-documenter markdown -i temp -o doc",
-    "trace": "tsc dist/types/index.d.ts --traceResolution > trace.log",
-    "docT": "jsdoc2md src/is/index.ts"
-  },
+  "author": "cavinHuang",
+  "license": "ISC",
   "keywords": [
     "util",
     "date",
     "string"
   ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "./dist/**/*",
     "package.json"
   ],
-  "author": "cavinHuang",
-  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsup --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "doc": "api-extractor run --local --verbose && api-documenter markdown -i temp -o doc",
+    "doc:debug": "api-extractor run --local --verbose --diagnostics && api-documenter markdown -i temp -o doc",
+    "trace": "tsc dist/types/index.d.ts --traceResolution > trace.log",
+    "docT": "jsdoc2md src/is/index.ts"
+  },
   "devDependencies": {
+    "@cavin-huang/eslint-config": "^0.0.7",
     "@microsoft/api-documenter": "^7.22.21",
     "@microsoft/api-extractor": "^7.36.0",
     "@types/node": "^20.3.1",
+    "eslint": "^8.45.0",
     "tsup": "^7.0.0",
     "typescript": "^5.1.3"
   }
