@@ -27,7 +27,7 @@
     "docT": "jsdoc2md src/is/index.ts"
   },
   "devDependencies": {
-    "@cavin-huang/eslint-config": "^0.0.7",
+    "@cavin-huang/eslint-config": "^0.0.11",
     "@microsoft/api-documenter": "^7.22.21",
     "@microsoft/api-extractor": "^7.36.0",
     "@types/node": "^20.3.1",

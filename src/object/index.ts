@@ -1,6 +1,7 @@
 import type { Key } from '../types'
 
 export * from './assign'
+export * from './get'
 
 /**
  * 该函数检查给定对象中是否存在给定键并返回布尔值。
